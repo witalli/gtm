@@ -1,0 +1,98 @@
+// Configuration
+const tagID = 'XXX'; // Insert UET Tag ID here
+const revenueInclTax = true; // Setting for Revenue
+const purchaseEventName = 'purchase'; // Can be changed to a custom event name
+
+// Default consent values
+let customerPrivacyStatus = init.customerPrivacy;
+let cc_statistics = true;
+let cc_marketing = true;
+
+
+// Page View
+analytics.subscribe("page_viewed", async event => {
+
+window.uetq = window.uetq || [];
+  window.uetq.push('consent', 'default', {
+        'ad_storage': cc_marketing ? 'granted' : 'denied'
+    });
+  
+  if (!customerPrivacyStatus || 
+      customerPrivacyStatus.analyticsProcessingAllowed === undefined || 
+      customerPrivacyStatus.marketingAllowed === undefined) {
+    try {
+      const cmp_a = await browser.cookie.get('_cmp_a');
+      const cookiedecoded = JSON.parse(decodeURIComponent(cmp_a));
+      cc_statistics = cookiedecoded?.purposes?.a ?? cc_statistics;
+      cc_marketing = cookiedecoded?.purposes?.m ?? cc_marketing;
+    } catch (e) {
+      // Handle any errors that might occur
+    }
+  } else {
+    cc_statistics = customerPrivacyStatus.analyticsProcessingAllowed;
+    cc_marketing = customerPrivacyStatus.marketingAllowed;
+  }
+  
+    window.uetq = window.uetq || [];
+    window.uetq.push('consent', 'update', {
+        'ad_storage': cc_marketing ? 'granted' : 'denied'
+    });
+
+    // Load UET Tag
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:tagID, enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+});
+
+
+
+// Checkout Completed
+analytics.subscribe("checkout_completed", async (event) => {
+
+    // Set revenue incl or excl tax
+    let revenue;
+    if (!revenueInclTax) {
+        revenue = event.data.checkout.totalPrice.amount - event.data.checkout.totalTax.amount;
+    } else {
+        revenue = event.data.checkout.totalPrice.amount;
+    }
+    let currency = event.data?.checkout?.currencyCode;
+
+    // Function to Standardize Email
+    function standardizeEmail(email) {
+        const removeAccents = (str) => {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        };
+
+        let standardizedEmail = email.trim().toLowerCase();
+        standardizedEmail = removeAccents(standardizedEmail);
+        standardizedEmail = standardizedEmail.replace(/\+.*(?=@)/, '');
+        standardizedEmail = standardizedEmail.replace(/\.(?=[^@]*@)/g, '');
+        standardizedEmail = standardizedEmail.replace(/\.$/, '');
+
+        if (!standardizedEmail.includes('@')) {
+            throw new Error('Invalid email format: "@" missing.');
+        }
+        return standardizedEmail;
+    }
+
+    // Send Enhanced Conversion Event
+    window.uetq.push('set', {
+        'pid': {
+            'em': standardizeEmail(event.data?.checkout?.email),
+            'ph': event.data?.checkout?.phone,
+        }
+    });
+
+    // Send Purchase Event
+    window.uetq.push('event', purchaseEventName, {'revenue_value': revenue, 'currency': currency});
+
+});
+
+// Handling visitor consent changes
+api.customerPrivacy.subscribe('visitorConsentCollected', async (event) => {
+    let cc_statistics = event.customerPrivacy.analyticsProcessingAllowed;
+    let cc_marketing = event.customerPrivacy.marketingAllowed;
+
+    window.uetq.push('consent', 'update', {
+        'ad_storage': cc_marketing ? 'granted' : 'denied'
+    });
+});
