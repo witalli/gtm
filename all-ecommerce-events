@@ -1,0 +1,1 @@
+^(add_payment_info|add_shipping_info|add_to_cart|add_to_wishlist|begin_checkout|purchase|remove_from_cart|select_item|view_cart|view_item|view_item_list|generate_lead|login|search|sign_up)$
