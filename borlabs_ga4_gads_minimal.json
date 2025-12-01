@@ -1,0 +1,940 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-12-01 12:19:23",
+    "containerVersion": {
+        "path": "accounts/6170367492/containers/236579247/versions/0",
+        "accountId": "6170367492",
+        "containerId": "236579247",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6170367492/containers/236579247",
+            "accountId": "6170367492",
+            "containerId": "236579247",
+            "name": "minimal borlabs",
+            "publicId": "GTM-5H8XBTBZ",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1764591447066",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6170367492/containers/236579247/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-5H8XBTBZ"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "6",
+                "name": "gAds Tag",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "AW-{{gAds Conversion ID}}"
+                    }
+                ],
+                "fingerprint": "1764591470445",
+                "firingTriggerId": [
+                    "4"
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_LOAD",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "7",
+                "name": "gAds Conversion - Generate Lead",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "100"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{gAds Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "EUR"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "xxx"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1764591470445",
+                "setupTag": [
+                    {
+                        "tagName": "gAds Tag"
+                    }
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "11",
+                "name": "gAds Conversion - Contact Phone",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "10"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{gAds Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "EUR"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "xxx"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1764591470452",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "gAds Tag"
+                    }
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "15",
+                "name": "GA4 event - contact_mail",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "click_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "contact_mail"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 Mess ID}}"
+                    }
+                ],
+                "fingerprint": "1764591470453",
+                "firingTriggerId": [
+                    "13"
+                ],
+                "parentFolderId": "12",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "17",
+                "name": "gAds Conversion - Contact Mail",
+                "type": "awct",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableNewCustomerReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableProductReporting",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionValue",
+                        "value": "10"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableShippingData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{gAds Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "currencyCode",
+                        "value": "EUR"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionLabel",
+                        "value": "xxx"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1764591470453",
+                "firingTriggerId": [
+                    "13"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "gAds Tag"
+                    }
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "19",
+                "name": "GA4 Konfiguration",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "{{GA4 Mess ID}}"
+                    }
+                ],
+                "fingerprint": "1764591470453",
+                "firingTriggerId": [
+                    "18"
+                ],
+                "parentFolderId": "12",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "20",
+                "name": "gAds - Remarketing Tag",
+                "type": "sp",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDynamicRemarketing",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionCookiePrefix",
+                        "value": "_gcl"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "{{gAds Conversion ID}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customParamsFormat",
+                        "value": "NONE"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1764591470453",
+                "firingTriggerId": [
+                    "4"
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "21",
+                "name": "GA4 event - generate_lead",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "generate_lead"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 Mess ID}}"
+                    }
+                ],
+                "fingerprint": "1764591470453",
+                "parentFolderId": "12",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "23",
+                "name": "GA4 event - contact_phone",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "click_text"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{Click Text}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "contact_phone"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "{{GA4 Mess ID}}"
+                    }
+                ],
+                "fingerprint": "1764591470475",
+                "firingTriggerId": [
+                    "10"
+                ],
+                "parentFolderId": "12",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "tagId": "24",
+                "name": "gAds Conversion Linker",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCrossDomain",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableUrlPassthrough",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCookieOverrides",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1764591470475",
+                "firingTriggerId": [
+                    "4"
+                ],
+                "parentFolderId": "5",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "triggerId": "4",
+                "name": "borlabs-cookie-opt-in-google-ads",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "borlabs-cookie-opt-in-google-ads"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1764591470444"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "triggerId": "10",
+                "name": "click tel",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "tel:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{borlabs-google-analytics}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1764591470452"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "triggerId": "13",
+                "name": "click mailto",
+                "type": "LINK_CLICK",
+                "filter": [
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click URL}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "mailto:"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "CONTAINS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{borlabs-google-analytics}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1764591470452"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "triggerId": "18",
+                "name": "borlabs-cookie-opt-in-google-analytics",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "borlabs-cookie-opt-in-google-analytics"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1764591470453"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "variableId": "3",
+                "name": "gAds Conversion ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "xxx"
+                    }
+                ],
+                "fingerprint": "1764591470444",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "variableId": "9",
+                "name": "borlabs-google-analytics",
+                "type": "cvt_PBNWW",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "serviceName",
+                        "value": "google-analytics"
+                    }
+                ],
+                "fingerprint": "1764591470452",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "variableId": "14",
+                "name": "GA4 Mess ID",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "G-XXXXXXX"
+                    }
+                ],
+                "fingerprint": "1764591488077",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "variableId": "16",
+                "name": "borlabs-google-ads",
+                "type": "cvt_PBNWW",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "serviceName",
+                        "value": "google-ads"
+                    }
+                ],
+                "fingerprint": "1764591470453",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "folderId": "5",
+                "name": "gAds",
+                "fingerprint": "1764591470445"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "folderId": "12",
+                "name": "GA4",
+                "fingerprint": "1764591470452"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_PROVIDER",
+                "name": "Video Provider"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_URL",
+                "name": "Video URL"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_TITLE",
+                "name": "Video Title"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_DURATION",
+                "name": "Video Duration"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_PERCENT",
+                "name": "Video Percent"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_VISIBLE",
+                "name": "Video Visible"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_STATUS",
+                "name": "Video Status"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "VIDEO_CURRENT_TIME",
+                "name": "Video Current Time"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "SCROLL_DEPTH_THRESHOLD",
+                "name": "Scroll Depth Threshold"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "SCROLL_DEPTH_UNITS",
+                "name": "Scroll Depth Units"
+            },
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "type": "SCROLL_DEPTH_DIRECTION",
+                "name": "Scroll Direction"
+            }
+        ],
+        "fingerprint": "1764591563358",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6170367492/containers/236579247/versions/0?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "6170367492",
+                "containerId": "236579247",
+                "templateId": "8",
+                "name": "Borlabs Cookie Consent Variable",
+                "fingerprint": "1764591470445",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"MACRO\",\n  \"id\": \"cvt_PBNWW\",\n  \"version\": 1,\n  \"displayName\": \"Borlabs Cookie Consent Variable\",\n  \"description\": \"Consent variable for the Wordpress plugin \\\"Borlabs Cookie\\\". See our documentation article about the Google Tag Manager for more information. The link to the documentation is below.\",\n  \"containerContexts\": [\n    \"WEB\"\n  ],\n  \"categories\": [\n    \"UTILITY\",\n    \"TAG_MANAGEMENT\"\n  ],\n  \"brand\": {\n    \"displayName\": \"Borlabs\",\n    \"id\": \"github.com_Borlabs\"\n  }\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"serviceName\",\n    \"displayName\": \"Key of the service/cookie (f.e. google-analytics)\",\n    \"simpleValueType\": true\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst callInWindow = require('callInWindow');\nconst log = require('logToConsole');\nconst query = require('queryPermission');\nconst logPrefix = 'Borlabs Cookie Consent Variable: ';\n\nif (query('access_globals', 'execute', 'BorlabsCookie.checkCookieConsent') && query('access_globals', 'execute', 'BorlabsCookie.Consents.hasConsent')) {\n  const consentValueBorlabsV2 = callInWindow('BorlabsCookie.checkCookieConsent', data.serviceName);\n  if (typeof consentValueBorlabsV2 !== 'undefined') {\n    return consentValueBorlabsV2;\n  }\n  const consentValueBorlabsV3 = callInWindow('BorlabsCookie.Consents.hasConsent', data.serviceName);\n  if (typeof consentValueBorlabsV3 !== 'undefined') {\n    return consentValueBorlabsV3;\n  }\n\n  log(logPrefix+'Borlabs Cookie is not installed');\n  return false;\n}\n\nlog(logPrefix+'Variable is missing permissions');\nreturn false;\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"BorlabsCookie.checkCookieConsent\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"BorlabsCookie.Consents.hasConsent\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"debug\"\n          }\n        }\n      ]\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: If no permission returns false\n  code: |-\n    // arrange\n    const log = require('logToConsole');\n    const mockData = {\n      serviceName: 'test-service'\n    };\n    mock('queryPermission', function() {\n      return false;\n    });\n    mock('callInWindow', function(pathToFunction, argument1) {\n      log(pathToFunction);\n      return true;\n    });\n\n    // act\n    let variableResult = runCode(mockData);\n\n    // assert\n    assertThat(variableResult).isEqualTo(false);\n    assertApi('callInWindow').wasNotCalled();\n    assertApi('logToConsole').wasCalledWith('Borlabs Cookie Consent Variable: Variable is missing permissions');\n- name: If consent was given for provided cookie return true (Borlabs Cookie V2)\n  code: |\n    // arrange\n    const log = require('logToConsole');\n    const mockData = {\n      serviceName: 'test-service'\n    };\n    mock('callInWindow', function(pathToFunction, argument1) {\n      if (pathToFunction === 'BorlabsCookie.checkCookieConsent') {\n        return true;\n      }\n      if (pathToFunction === 'BorlabsCookie.Consents.hasConsent') {\n        return undefined;\n      }\n      fail('Calling \"'+pathToFunction+'\" in window is not expected!');\n    });\n\n    // act\n    let variableResult = runCode(mockData);\n\n    // assert\n    assertThat(variableResult).isEqualTo(true);\n    assertApi('callInWindow').wasCalledWith('BorlabsCookie.checkCookieConsent', mockData.serviceName);\n    assertApi('callInWindow').wasNotCalledWith('BorlabsCookie.Consents.hasConsent', mockData.serviceName);\n- name: If consent was given for provided service return true (Borlabs Cookie V3)\n  code: |\n    // arrange\n    const log = require('logToConsole');\n    const mockData = {\n      serviceName: 'test-service'\n    };\n    mock('callInWindow', function(pathToFunction, argument1) {\n      if (pathToFunction === 'BorlabsCookie.checkCookieConsent') {\n        return undefined;\n      }\n      if (pathToFunction === 'BorlabsCookie.Consents.hasConsent') {\n      return true;\n      }\n      fail('Calling \"'+pathToFunction+'\" in window is not expected!');\n    });\n\n    // act\n    let variableResult = runCode(mockData);\n\n    // assert\n    assertThat(variableResult).isEqualTo(true);\n    assertApi('callInWindow').wasCalledWith('BorlabsCookie.checkCookieConsent', mockData.serviceName);\n    assertApi('callInWindow').wasCalledWith('BorlabsCookie.Consents.hasConsent', mockData.serviceName);\n- name: If no version of Borlabs Cookie installed returns false\n  code: |-\n    // arrange\n    const log = require('logToConsole');\n    const mockData = {\n      serviceName: 'test-service'\n    };\n    mock('callInWindow', function(pathToFunction, argument1) {\n      if (pathToFunction === 'BorlabsCookie.checkCookieConsent') {\n        return undefined;\n      }\n      if (pathToFunction === 'BorlabsCookie.Consents.hasConsent') {\n        return undefined;\n      }\n      fail('Calling \"'+pathToFunction+'\" in window is not expected!');\n    });\n\n    // act\n    let variableResult = runCode(mockData);\n\n    // assert\n    assertThat(variableResult).isEqualTo(false);\n    assertApi('callInWindow').wasCalledWith('BorlabsCookie.checkCookieConsent', mockData.serviceName);\n    assertApi('callInWindow').wasCalledWith('BorlabsCookie.Consents.hasConsent', mockData.serviceName);\n    assertApi('logToConsole').wasCalledWith('Borlabs Cookie Consent Variable: Borlabs Cookie is not installed');\n\n\n___NOTES___\n\nThe variable returns true if the consent is given and false otherwise. This variable can be used to restrict a trigger to a given cookie consent.\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "Borlabs",
+                    "repository": "Borlabs-Cookie-GTM-Variable-Template",
+                    "version": "fc3b4760c76207ea940b2555798fd6d34e223a0f",
+                    "signature": "a13846f08e22017ab660739a3d47ec212ee04c26c345498f672bb7801a3f44ea",
+                    "galleryTemplateId": "PBNWW"
+                }
+            }
+        ]
+    }
+}
